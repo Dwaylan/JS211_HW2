@@ -24,13 +24,16 @@ const hand1Wins = "Hand 1. VICTORIOUS!"
 const hand2Wins = "Hand 2. VICTORIOUS!"
 const error = "Error detected"
 
+hand1 = hand1.toLowerCase().trim()
+hand2 = hand2.toLowerCase().trim()
+
 
   // Write code here
   // Use the unit test to see what is expected
 
 }
 if (hand1 === hand2){
-  return "It's a DRAW!";
+  return  "It's a DRAW!";
   // If "hand1" is equal to "hand2" return "It's a DRAW"
 }
 
@@ -95,9 +98,26 @@ describe('#rockPaperScissors()', () => {
     assert.equal(rockPaperScissors('rock', 'scissors'), "Hand 1. VICTORIOUS!");
     });
     it('should scrub input to ensure lowercase with "trim"ed whitepace', () => {
-    assert.equal(rockPaperScissors('rOcK', ' paper '), "Hand 2. VICTORIOUS!");
+    assert.equal(rockPaperScissors('rock', ' paper '), "Hand 2. VICTORIOUS!");
     assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand 2. VICTORIOUS!");
     assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand 1. VICTORIOUS!");
+
+    // Additional tests for homework
+    // *** How tests work. We have to first import our assert to allow unit testing
+    // Next our "it" method is used to alert our system of a callback function.
+    // When our program see the it method it expects a specifications in the form of
+    // strings and callback functions to give the test parameters, which is why we see
+    // "it" followed by a callback function that starts with a sentence string and then 
+    // the actual function with test parameters for passing and failing
+
+    // Our game should not allow the passing of numeric characters. Realistically
+    // the only one I see being switched on accident is the 0 for 0
+    it('should not allow numeric characters',function(){
+    assert.equal(rockPaperScissors('r0ck','paper'), 'no numeric charaters please')
+    })
+
+    // Our game should not allow misspelled words to pass
+    it('should not allow the misspelling of elements to pass',)
     });
 });
 } else {

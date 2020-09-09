@@ -31,3 +31,9 @@ function convertToLetter(grade){
 console.log(convertToLetter(92));
 console.log(convertToLetter(105));
 console.log(convertToLetter(73));
+// We are console logging the convert to letter function which is typically
+// console.log(convertToLetter)
+// However we are passing in independent variables to see their converson
+// so it should look like: console.log(convertToLetter([number]))
+// The logged number entry will satisfy one of the "if" statements and a
+// a corresponding letter grade will be logged in the terminal
