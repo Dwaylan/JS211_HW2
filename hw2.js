@@ -117,7 +117,13 @@ describe('#rockPaperScissors()', () => {
     })
 
     // Our game should not allow misspelled words to pass
-    it('should not allow the misspelling of elements to pass',)
+    it('should not allow the misspelling of elements to pass', function(){
+    assert.equal(rockPaperScissors('rick','paper'), 'spell check "rock"')
+    assert.equal(rockPaperScissors('rock','peper'), 'spell check "paper"')
+    assert.equal(rockPaperScissors('scisors','paper'), 'spell check "scissors"')
+    assert.equal(rockPaperScissors('scizzors','paper'), 'spell check "scissors"')
+    assert.equal(rockPaperScissors('rock','papper'), 'spell check "papper"')
+    })
     });
 });
 } else {
