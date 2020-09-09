@@ -19,13 +19,12 @@ output: process.stdout
 // The function "rockPaperScissors" passes two arguments, "hand1" and "hand2", that
 // will yield a set of results.
 const rockPaperScissors = (hand1, hand2) => {
-const tie = "It's a DRAW"
-const hand1Wins = "Hand 1. VICTORIOUS!"
-const hand2Wins = "Hand 2. VICTORIOUS!"
-const error = "Error detected"
 
-hand1 = hand1.toLowerCase().trim()
-hand2 = hand2.toLowerCase().trim()
+let handVariables = 'rock' || 'paper' || 'scissors'
+
+
+hand1 = handVariables.toLowerCase().trim()
+hand2 = handVariables.toLowerCase().trim()
 
 
   // Write code here
@@ -33,7 +32,7 @@ hand2 = hand2.toLowerCase().trim()
 
 }
 if (hand1 === hand2){
-  return  "It's a DRAW!";
+  return 'Its a DRAW' ;
   // If "hand1" is equal to "hand2" return "It's a DRAW"
 }
 
@@ -97,10 +96,12 @@ describe('#rockPaperScissors()', () => {
     assert.equal(rockPaperScissors('paper', 'scissors'), "Hand 2. VICTORIOUS!");
     assert.equal(rockPaperScissors('rock', 'scissors'), "Hand 1. VICTORIOUS!");
     });
-    it('should scrub input to ensure lowercase with "trim"ed whitepace', () => {
+    it('should scrub input to ensure lowercase with "trimmed whitepace', () => {
     assert.equal(rockPaperScissors('rock', ' paper '), "Hand 2. VICTORIOUS!");
     assert.equal(rockPaperScissors('Paper', 'SCISSORS'), "Hand 2. VICTORIOUS!");
     assert.equal(rockPaperScissors('rock ', 'sCiSsOrs'), "Hand 1. VICTORIOUS!");
+
+    
 
     // Additional tests for homework
     // *** How tests work. We have to first import our assert to allow unit testing
