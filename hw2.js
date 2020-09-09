@@ -20,17 +20,17 @@ output: process.stdout
 // will yield a set of results.
 const rockPaperScissors = (hand1, hand2) => {
 
-let handVariables = 'rock' || 'paper' || 'scissors'
+// let handVariables = 'rock' || 'paper' || 'scissors'
 
 
-hand1 = handVariables.toLowerCase().trim()
-hand2 = handVariables.toLowerCase().trim()
+hand1 = hand1.toLowerCase().trim()
+hand2 = hand2.toLowerCase().trim()
 
 
   // Write code here
   // Use the unit test to see what is expected
 
-}
+
 if (hand1 === hand2){
   return 'Its a DRAW' ;
   // If "hand1" is equal to "hand2" return "It's a DRAW"
@@ -63,9 +63,10 @@ if (hand2 === "paper"){
     return "Hand 2. VICTORIOUS!";
   }
 }
+}
 
-console.log(hand1)
-console.log(hand2)
+// console.log(hand1)
+// console.log(hand2)
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
