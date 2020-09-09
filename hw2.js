@@ -114,12 +114,12 @@ describe('#rockPaperScissors()', () => {
 
     // Our game should not allow the passing of numeric characters. Realistically
     // the only one I see being switched on accident is the 0 for 0
-    it('should not allow numeric characters',function(){
-    assert.equal(rockPaperScissors('r0ck','paper'), 'no numeric charaters please')
-    })
+    it('should not allow numeric characters', () => {
+    assert.equal(rockPaperScissors('r0ck','paper'), 'no numeric charaters please');
+    });
 
     // Our game should not allow misspelled words to pass
-    it('should not allow the misspelling of elements to pass', function(){
+    it('should not allow the misspelling of elements to pass', () => {
     assert.equal(rockPaperScissors('rick','paper'), 'spell check "rock"')
     assert.equal(rockPaperScissors('rock','peper'), 'spell check "paper"')
     assert.equal(rockPaperScissors('scisors','paper'), 'spell check "scissors"')
